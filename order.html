@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Prints - Logan Laine Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Order Prints</h1>
+        <nav>
+            <a href="index.html">About Me</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <section id="order">
+        <h2>Order a Print</h2>
+        <p>Interested in purchasing a print? Fill out the form below and I'll get back to you via email.</p>
+        <form action="mailto:Logan.laine@outlook.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Inspired By Grain Photography</p>
+    </footer>
+</body>
+</html>
