@@ -6,13 +6,16 @@
     <title>Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background: linear-gradient(135deg, #1a1a1a, #4b0082);
-            min-height: 100vh;
-            font-family: 'Arial', sans-serif;
-            position: relative;
-            overflow-x: hidden;
-        }
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 255, 0.3)), url('test.jpeg');
+    background-size: cover; /* Scales the image to cover the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
         .title {
             font-size: 4rem;
             font-weight: bold;
