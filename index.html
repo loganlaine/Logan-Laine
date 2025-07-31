@@ -2,33 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logan Laine Photography</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Logan Laine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #4b0082);
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .title {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .image-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Inspired By Grain Photography</h1>
-        <nav>
-            <a href="gallery.html">Gallery</a>
-        </nav>
+<body class="flex flex-col items-center justify-center text-white">
+    <header class="text-center py-12">
+        <h1 class="title text-5xl md:text-7xl text-white animate-pulse">Logan Laine</h1>
+        <p class="mt-4 text-xl md:text-2xl">Explore My Pages</p>
     </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Logan. I capture moments from my travels — from stunning architecture to serene landscapes and candid shots of my friends. Follow and reach out on insta if you are interested in prints: <a href="https://instagram.com/inspiredbygrain" target="_blank">@inspiredbygrain</a></p>
-    </section>
-
-    <main>
-	<section id="main-photo">
-            <img src="images/me.jpg" alt="Logan Laine">
-        </section>
-    <main>
-
-    <footer>
-        <p>&copy; 2025 Inspired By Grain Photography</p>
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="https://www.loganlaine.com/aboutme.com" class="image-card rounded-lg overflow-hidden">
+                <img src="aboutme.PNG" alt="About Me" class="object-fit: cover">
+                <div class="p-4 bg-white bg-opacity-10 text-center">
+                    <h2 class="text-lg font-semibold">About Me</h2>
+                </div>
+            </a>
+            <a href="https://www.loganlaine.com/qrgenerator" class="image-card rounded-lg overflow-hidden">
+                <img src="qrgenerator.png" alt="QR Code Generator" class="object-fit: cover">
+                <div class="p-4 bg-white bg-opacity-10 text-center">
+                    <h2 class="text-lg font-semibold">QR Code Generator</h2>
+                </div>
+            </a>
+            <a href="https://www.reunderwriter.com" class="image-card rounded-lg overflow-hidden">
+                <img src="recalculator.png" alt="About" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white bg-opacity-10 text-center">
+                    <h2 class="text-lg font-semibold">Real Estate Calculator</h2>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/inspiredbygrain/" class="image-card rounded-lg overflow-hidden">
+                <img src="instagram.png" alt="Instagram" class="w-full h-64 object-cover">
+                <div class="p-4 bg-white bg-opacity-10 text-center">
+                    <h2 class="text-lg font-semibold">Follow My Photography</h2>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer class="py-6 text-center">
+        <p>&copy; 2025 Logan Laine. All rights reserved.</p>
     </footer>
 </body>
 </html>
