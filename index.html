@@ -3,67 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Logan Laine's Portfolio</title>
     <style>
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 255, 0.3)), url('test.jpeg');
-    background-size: cover; /* Scales the image to cover the entire area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-}
-        .title {
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        body {
+	    background: url('test.jpeg');
+    	    background-size: 150%;
+	    background-position: center;
+	    background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
         }
-        .image-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        header {
+            text-align: center;
+            padding: 2rem;
         }
-        .image-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #222;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #999;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+	    flex: 1;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	    max-width: 100%;
+            //max-width: calc(3 * (250px + 1.5rem)); /* Limits to 3 columns: 3 * (min-width + gap) */
+            margin: 0 auto; /* Center the grid if fewer than 3 columns */
+            gap: 1.5rem;
+        }
+        .card {
+	    background-color: rgba(255, 255, 255, 0.2);            
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .card h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #555;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
-<body class="flex flex-col items-center justify-center text-white">
-    <header class="text-center py-12">
-        <h1 class="title text-5xl md:text-7xl text-white animate-pulse">Logan Laine</h1>
-        <p class="mt-4 text-xl md:text-2xl">These are pages I have created. Feel free to use them!</p>
+<body>
+    <header>
+        <h1>An HTML Collection</h1>
+        <p>Designed by Logan Laine</p>
     </header>
-    <main class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <a href="https://www.loganlaine.com/aboutme.com" class="image-card rounded-lg overflow-hidden">
-                <img src="aboutme.PNG" alt="About Me" class="object-fit: cover">
-                <div class="p-4 bg-white bg-opacity-10 text-center">
-                    <h2 class="text-lg font-semibold">About Me</h2>
-                </div>
+    <div class="container">
+        <div class="grid">
+            <a href="https://www.loganlaine.com/aboutme.com" class="card">
+                <img src="aboutme.PNG" alt="About Me">
+                <h2>About Me</h2>
             </a>
-            <a href="https://www.loganlaine.com/qrgenerator" class="image-card rounded-lg overflow-hidden">
-                <img src="qrgenerator.png" alt="QR Code Generator" class="object-fit: cover">
-                <div class="p-4 bg-white bg-opacity-10 text-center">
-                    <h2 class="text-lg font-semibold">QR Code Generator</h2>
-                </div>
+            <a href="https://www.loganlaine.com/qrgenerator" class="card">
+                <img src="qrgenerator.png" alt="QR Code Generator">
+                <h2>QR Code Generator</h2>
             </a>
-            <a href="https://www.reunderwriter.com" class="image-card rounded-lg overflow-hidden">
-                <img src="recalculator.png" alt="About" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white bg-opacity-10 text-center">
-                    <h2 class="text-lg font-semibold">Real Estate Calculator</h2>
-                </div>
+            <a href="https://www.reunderwriter.com" class="card">
+                <img src="recalculator.png" alt="Real Estate Calculator">
+                <h2>Real Estate Calculator</h2>
             </a>
-            <a href="https://www.instagram.com/inspiredbygrain/" class="image-card rounded-lg overflow-hidden">
-                <img src="instagram.png" alt="Instagram" class="w-full h-64 object-cover">
-                <div class="p-4 bg-white bg-opacity-10 text-center">
-                    <h2 class="text-lg font-semibold">Follow My Photography</h2>
-                </div>
+            <a href="https://www.instagram.com/inspiredbygrain" class="card">
+                <img src="instagram.png" alt="Follow My Photography">
+                <h2>Photography</h2>
             </a>
         </div>
-    </main>
-    <footer class="py-6 text-center">
+    </div>
+    <footer>
         <p>&copy; 2025 Logan Laine. All rights reserved.</p>
     </footer>
 </body>
